@@ -1,0 +1,30 @@
+{
+    "name": "hugostech/data-interaction",
+    "description": "This Package is designed for data communication between two servers",
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hugo Wang",
+            "email": "hugowangchn@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Hugostech\\Data_interaction\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hugostech\\Data_interaction\\DataInteractionServiceProvider"
+            ],
+            "aliases": {
+                "DI": "Hugostech\\Data_interaction\\DataInteractionFacade"
+            }
+        }
+    }
+}
