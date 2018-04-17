@@ -23,7 +23,7 @@
                 "Hugostech\\Data_interaction\\DataInteractionServiceProvider"
             ],
             "aliases": {
-                "DI": "Hugostech\\Data_interaction\\DataInteractionFacade"
+                "DI": "Hugostech\\Data_interaction\\Facades\\DI"
             }
         }
     }
