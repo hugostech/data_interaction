@@ -27,7 +27,7 @@ class DataInteractionServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('DI',function($app){
+        $this->app->singleton('DI',function($app){
             return new DataInteractionService();
         });
     }

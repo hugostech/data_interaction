@@ -11,7 +11,7 @@ namespace Hugostech\Data_interaction;
 
 use Illuminate\Support\Facades\Facade;
 
-class DataInteractionFacade extends Facade
+class DI extends Facade
 {
     protected static function getFacadeAccessor()
     {

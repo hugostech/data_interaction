@@ -46,10 +46,22 @@ class DataInteractionService
         
     }
 
-    public function post($url,$json=''){
+    public function put($url,$json){
+        $this->post($url,$json,'PUT');
+    }
+
+    public function del($url,$json){
+        $this->post($url,$json,'DELETE');
+    }
+
+    public function patch($url,$json){
+        $this->post($url,$json,'PATCH');
+    }
+
+    public function post($url,$json='',$method='POST'){
         try{
             $json = $this->sign($json);
-            return $this->client->request('POST',$url,compact('json'));
+            return $this->client->request($method,$url,compact('json'));
         }catch (RequestException $e){
             if ($e->hasResponse()){
                 Log::error(Psr7\str($e->getResponse()));
